@@ -79,6 +79,12 @@
 		fi \
 	}; f"
 
+	# Find commits with term ($1) in commit message
+	fm = "!f() { git log --all --grep=\"$1\"; }; f"
+
+	# List files in commit $1=hash-id
+	lc = "!f() { git diff-tree --no-commit-id --name-only -r "$1"; }; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -186,3 +192,17 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+
+#Me:
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = ~/Applications/Developer/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+
+[includeIf "gitdir:~/Documents/Work/"]
+	path = .gitconfig-work
