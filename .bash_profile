@@ -9,17 +9,13 @@ export PATH="$PATH:$HOME/Applications/Developer/Android/sdk/tools:$HOME/Applicat
 # Yarn shims
 export PATH="$HOME/.yarn/bin:$PATH"
 
-#Me: custom command prompt
-#PS1='\e[36m\][\A](\e[1m\]\j\e[0m\]) \e[4m\]\W$\e[0;32m\] '
-PS1='[\A](\j) \W$ ' #custom command prompt
-
 # Add key
 
 # needed for vagrant (cap deploy)
 ssh-add ~/.ssh/id_rsa
 
-# needed for github
-ssh-add -K ~/.ssh/id_rsa_github
+# needed for github (with Mac provided ssh-add command due to -K flag
+/usr/bin/ssh-add -K ~/.ssh/id_rsa_github
 #/Me
 
 # Load the shell dotfiles, and then some:

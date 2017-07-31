@@ -137,7 +137,8 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	#Me: Not going to bother with this now
+	gpgsign = false
 
 [diff]
 
@@ -203,6 +204,9 @@
 	cmd = ~/Applications/Developer/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
+
+[include]
+	path = .gitconfig-personal
 
 [includeIf "gitdir:~/Documents/Work/"]
 	path = .gitconfig-work

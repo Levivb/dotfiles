@@ -13,7 +13,7 @@ alias -- -="cd -"
 #cd shortcuts
 ##alias d="cd ~/Documents/Dropbox"
 alias mxmm='cd ~/Documents/Work/'
-alias reps='cd ~/Documents/Mxmm/repositories/'
+alias reps='cd ~/Documents/Work/repositories/'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
@@ -33,7 +33,7 @@ alias do_sleep='osascript -e "tell application \"System Events\" to sleep"'
 #Me: Development
 alias sourcetree='open -a SourceTree'
 alias phpstorm='open -a PhpStorm'
-alias homestead='function __homestead() { (cd ~/Documents/Work/A_Scripts/_Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+alias homestead='function __homestead() { (cd ~/Documents/_Runables/_Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
