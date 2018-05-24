@@ -16,16 +16,17 @@ alias mxmm='cd ~/Documents/Work/'
 alias reps='cd ~/Documents/Work/repositories/'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 
 alias refresh='source ~/.bash_profile'
-alias g="git"
-alias h="history"
-alias j="jobs"
+# alias g="git"
+# alias h="history"
+# alias j="jobs"
 alias sortuniq='sort -n | uniq | pbcopy'
 
 # Remove .DS_Store files in current and nested directories
 alias removedsstore='find . -name "*.DS_Store" -type f -delete'
+
+alias apple_apps="find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'"
 
 # In case I ever forget to lock my laptop and need to lock it remotely
 alias do_sleep='osascript -e "tell application \"System Events\" to sleep"'
@@ -33,7 +34,7 @@ alias do_sleep='osascript -e "tell application \"System Events\" to sleep"'
 #Me: Development
 alias sourcetree='open -a SourceTree'
 alias phpstorm='open -a PhpStorm'
-alias homestead='function __homestead() { (cd ~/Documents/_Runables/_Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+alias homestead='function __homestead() { (cd ~/Documents/_Runables/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -98,7 +99,7 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 
 # Flush Directory Service cache
 ##alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias flushdns="sudo killall -HUP mDNSResponder && echo macOS DNS Cache Reset"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
@@ -161,7 +162,7 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 
 #Me: Kill airplay process in case it's stuck (happens after closing laptop without disconnecting first)
-alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' | awk '{print $1}'`"
+alias fixairplay="sudo kill $(ps -ax | grep 'coreaudiod' | grep 'sbin' | awk '{print $1}')"
 
 #Me: Display names of known networks
 alias known_networks='defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences | grep SSIDString'

@@ -177,12 +177,12 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
-# Disable key repeat in favor of press-and-hold for keys
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Disable key repeat in favor of press-and-hold for accent keys
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 6
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -192,8 +192,8 @@ defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Show language menu in the top right corner of the boot screen
-sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
+# Don't show language menu in the top right corner of the boot screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
@@ -399,8 +399,8 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
+# Don't Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool false
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
@@ -552,8 +552,8 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreade
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedAscending" -string "yes"
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
-# Disable inline attachments (just show the icons)
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+# Enable inline attachments (instead of just showing the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
 
 # Enable automatic spell checking (Disable: NoSpellCheckingEnabled)
 defaults write com.apple.mail SpellCheckingBehavior -string "InlineSpellCheckingEnabled"

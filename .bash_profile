@@ -62,6 +62,9 @@ fi;
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
 
+#Enable iTerm Shell Integration: https://iterm2.com/documentation-shell-integration.html
+source ~/.iterm2_shell_integration.bash
+
 # Add `killall` tab completion for common apps
 #Me: Don't care about these
 ##complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
