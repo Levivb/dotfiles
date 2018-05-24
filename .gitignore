@@ -15,3 +15,7 @@ Thumbs.db
 
 # Me: IDE config dir
 .idea
+
+# Using multiple git repos to push different files to
+github_git
+gitlab_git
