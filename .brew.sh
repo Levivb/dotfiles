@@ -102,9 +102,8 @@ brew install python
 brew install python3
 brew install cheat
 brew install openssl1.1
-#brew install node
-#brew install yarn
-#brew install restic
+brew install node
+brew install yarn
 
 # Remove outdated versions from the cellar.
 brew cleanup

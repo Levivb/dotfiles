@@ -14,6 +14,9 @@ function doIt() {
 		--exclude=".vim" \
 		--exclude="bin" \
 		--exclude="init" \
+		--exclude=".idea" \
+		--exclude="github_git" \
+		--exclude="gitlab_git" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 	#Me: don't want these .vim, bin and init

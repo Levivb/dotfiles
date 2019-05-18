@@ -4,10 +4,27 @@ export PATH="$HOME/bin:$PATH";
 #Me:
 # Default
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin"
-# Android SDK
-export PATH="$PATH:$HOME/Applications/Developer/Android/sdk/tools:$HOME/Applications/Developer/Android/sdk/platform-tools"
 # Yarn shims
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Gnu Grep
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+# Gnu Sed
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# Gnu Indent
+PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
+
+# Ruby
+PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# Sqlite
+PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# Php
+PATH="/usr/local/opt/php@7.2/bin:$PATH"
+PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
 # Add key
 
