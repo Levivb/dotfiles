@@ -42,7 +42,7 @@ brew install grep
 #Me: skipping openssh as Mac version is required for keychain support
 ##brew install openssh
 brew install screen
-brew install homebrew/php/ph71 --with-gmp
+brew install php@7.2
 
 # Install font tools.
 #Me: Not needed
@@ -104,6 +104,28 @@ brew install cheat
 brew install openssl1.1
 brew install node
 brew install yarn
+
+
+#Me: Development
+brew install composer
+brew install php@7.2
+brew install mailhog
+brew install redis
+brew install dnsmasq
+brew link php72 --force
+composer global require laravel/valet
+
+brew install docker
+brew install docker-composer
+brew install docker-machine
+
+# valet install
+# brew services start mariadb
+# brew services start redis
+# brew services start mailhog
+# sudo brew services start php@7.2
+# sudo brew services start nginx
+# sudo brew services start dnsmasq
 
 # Remove outdated versions from the cellar.
 brew cleanup

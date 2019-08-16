@@ -86,7 +86,7 @@ alias la="ls -laF ${colorflag}"
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 #Me:  List all files colorized in long format, including dot files in human readable format
-alias ll="ls ${colorflag} -laFhL"
+alias ll="ls ${colorflag} -laFh"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"

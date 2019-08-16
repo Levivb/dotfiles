@@ -26,6 +26,12 @@ PATH="/usr/local/opt/sqlite/bin:$PATH"
 PATH="/usr/local/opt/php@7.2/bin:$PATH"
 PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
+# Composer
+PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# Node
+PATH="/usr/local/opt/node@10/bin:$PATH"
+
 # Add key
 
 # needed for vagrant (cap deploy)
